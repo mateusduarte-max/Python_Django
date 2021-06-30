@@ -17,8 +17,11 @@ class Evento(models.Model):
         db_table = 'evento'
 
     # Altera o nome do evento
-
     def __str__(self):
         return self.titulo
+
+    # Formatar data_evento
+    def get_data_evento(self):
+        return self.data_evento.strftime('%d/%m%Y')
 
 
